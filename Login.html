@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>
+Login page
+</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 style="font-family:Lucida Console;text-align:center;font-size:60px;">
+LOGIN PAGE
+</h1>
+<hr>
+<form name="login">
+<p>Username<t> <input type="text" name="userid"/></p>
+<p>Password         <input type="password" name="pswrd"/></p>
+<input type="button" onclick="check(this.form)" value="Login"/>
+<input type="reset" value="Cancel"/>
+</form>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "admin" && form.pswrd.value == "admin" )
+  {
+    window.open('Admin.html')/*opens the target page while Id & password matches*/
+  }
+ 
+ if ((form.userid.value == "saumya" && form.pswrd.value == "saumya") || 
+ (form.userid.value == "tanisha" && form.pswrd.value == "tanisha") || 
+ (form.userid.value == "st1" && form.pswrd.value == "st1") )
+{
+  window.open('exam.html')
+}
+else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+</body>
+</html>
